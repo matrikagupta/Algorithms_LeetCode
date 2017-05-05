@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace PracticeInterview
     {
+
+  // enQueue(q, x)
+  //1) While stack1 is not empty, push everything from satck1 to stack2.
+  //2) Push x to stack1(assuming size of stacks is unlimited).
+  //3) Push everything back to stack1.
     class _232_QueueUsingStack
         {
         Stack<int> st1;
@@ -22,8 +27,9 @@ namespace PracticeInterview
 
             if (st1.Count != 0)
                 {
-                for (int i = 0; i < st1.Count; i++)
-                    {
+               
+                    while (st1.Count != 0)
+                        {
                     st2.Push(st1.Pop());
                     }
                 }
@@ -36,7 +42,7 @@ namespace PracticeInterview
 
             if (st2.Count != 0)
                 {
-                for (int i = 0; i < st2.Count; i++)
+                while (st2.Count != 0)
                     {
                     st1.Push(st2.Pop());
                     }

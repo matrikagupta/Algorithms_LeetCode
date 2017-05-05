@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace PracticeInterview
     {
+    public class TreeNode
+        {
+       public TreeNode left;
+        public TreeNode right;
+        public int val = 0;
+        }
     class _104_MaxDepthofBinaryTree
         {
         public int MaxDepth(TreeNode root)
