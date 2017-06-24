@@ -9,51 +9,58 @@ namespace PracticeInterview
     class _449_SerializeDeserializeBST
         {
 
-        // Encodes a tree to a single string.
-        StringBuilder s = new StringBuilder();
-        public string serialize(TreeNode root)
-            {
-            if (root == null)
-                return null;
 
-            s.Append(root.val + ",");
-            serialize(root.left);
-            serialize(root.right);
-            return s.Remove(s.Length-1,s.Length).ToString();
+        public string serialize(Node root)
+            {
+            StringBuilder s = new StringBuilder();
+            serialize_inorder(s, root);
+            Console.WriteLine(s.ToString().Substring(0, s.Length - 1));
+            return s.ToString().Substring(0, s.Length - 1);
+
             }
 
-
-        // Decodes your encoded data to tree.
-        public TreeNode deserialize(string data)
+        private void serialize_inorder(StringBuilder s, Node root)
             {
-            TreeNode res = null;
+            if (root == null)
+                {
+                s.Append("null,");
+                return;
+                }
+            else
+                {
+                s.Append(root.item + ",");
+                serialize_inorder(s, root.leftChild);
+                serialize_inorder(s, root.rightChild);
+                }
+
+            }
+        // Decodes your encoded data to tree.
+        public Node deserialize(string data)
+            {
+            Node res = null;
             if ((data != null))
                 {
                 string[] a = data.Split(',');
-
-                res = deserialize_BST(a, 0, a.Length - 1);
+                int[] t = { 0 };
+                res = helper(a, t);
+                //res = deserialize_BST(a, 0, a.Length - 2);
                 }
             return res;
             }
-
-        public int finddiv(string[] a, int val, int low, int high)
+        public Node helper(String[] arr, int[] t)
             {
-            int i;
-            for (i = low; i <= high; i++)
+            if (arr[t[0]].Equals("null"))
                 {
-                if (Convert.ToInt32(a[i])>val)
-                    break;
-                }
-            return i;
-            }
-        public TreeNode deserialize_BST(string[] a, int low, int high)
-            {
-            if (low > high)
+                t[0]++;
                 return null;
-            TreeNode root = new TreeNode(Convert.ToInt32(a[low]));
-            int div = finddiv(a, root.val, low+1, high);
-            root.left = deserialize_BST(a, low + 1, div - 1);
-            root.right = deserialize_BST(a, div, high);
+                }
+
+            Node root = new Node();
+            root.item = Int32.Parse(arr[t[0]]);
+
+            t[0]++;
+            root.leftChild = helper(arr, t);
+            root.rightChild = helper(arr, t);
 
             return root;
             }
@@ -61,7 +68,15 @@ namespace PracticeInterview
         //public static void Main()
         //    {
         //    _449_SerializeDeserializeBST obj = new _449_SerializeDeserializeBST();
-        //    obj.deserialize("2,1,3");
+        //    Node node = new Node();
+        //    node.item = 2;
+        //    node.leftChild = new Node();
+        //    node.leftChild.item = 1;
+        //    node.rightChild = new Node();
+        //    node.rightChild.item = 3;
+
+        //    //  obj.serialize(node);
+        //    obj.deserialize(obj.serialize(node));
 
         //    }
         }

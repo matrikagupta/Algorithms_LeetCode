@@ -8,28 +8,24 @@ namespace PracticeInterview
     {
     class _380_InsertDeleteGetRandom
         {
-
-
         Dictionary<int, int> dict;
         Dictionary<int, int> dict2;
-     
+
         /** Initialize your data structure here. */
         public _380_InsertDeleteGetRandom()
             {
-
             dict = new Dictionary<int, int>();
             dict2 = new Dictionary<int, int>();
-
             }
 
-       
+
         public bool Insert(int val)
             {
 
             if (!dict.ContainsKey(val))
                 {
-                dict.Add(val,dict.Count);
-                dict2.Add(dict2.Count,val);
+                dict.Add(val, dict.Count);
+                dict2.Add(dict2.Count, val);
                 return true;
                 }
             else
@@ -39,11 +35,9 @@ namespace PracticeInterview
 
         public bool Remove(int val)
             {
-
             if (dict.ContainsKey(val))
                 {
                 int index = dict[val];
-
                 dict.Remove(val);
                 if (!(dict2.Count - 1 <= index))
                     {
@@ -55,26 +49,18 @@ namespace PracticeInterview
                 }
             else
                 return false;
-
             }
 
         /** Get a random element from the set. */
         public int GetRandom()
             {
-           
             if (dict.Count == 0)
-                {
                 return -1;
-                }
-
             if (dict.Count == 1)
-                {
                 return dict2[0];
-                }
             Random r = new Random();
             int random = (r.Next(dict.Count));
             return dict[random];
-
             }
 
         //public static void Main()

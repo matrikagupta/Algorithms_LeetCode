@@ -10,8 +10,12 @@ namespace PracticeInterview
         {
         public void Rotate(int[,] matrix)
             {
+            
+            //get the length of the matrix
             var n = matrix.GetUpperBound(0);
-
+           
+            if(! String.IsNullOrEmpty( Convert.ToString( matrix[0, 0])))
+                { }
             int temp = 0;
             for (int i = 0; i <= n / 2; i++)
                 {
@@ -22,12 +26,8 @@ namespace PracticeInterview
                     matrix[n - j, i] = matrix[n - i, n - j];
                     matrix[n - i, n - j] = matrix[j, n - i];
                     matrix[j, n - i] = temp;
-
-
                     }
-
                 }
-
             }
 
         //public static void Main()

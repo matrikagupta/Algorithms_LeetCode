@@ -13,6 +13,7 @@ namespace PracticeInterview
         //design an algorithm to find the maximum profit.
         public int MaxProfit(int[] prices)
             {
+          
             if (prices.Length == 0)
                 return 0;
             int max = 0;

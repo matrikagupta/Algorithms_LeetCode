@@ -46,7 +46,8 @@ namespace PracticeInterview
             for (int i = 0; i < nums.Length; i++)
                 {
                 //check if linkedlist has any elements, linkedlist first value having index should be in the range of k
-                // if k =3 and first value index in linkedlist is 1 and values of i =4, meaning 4-3=1 which is not less than first value of linkedlist
+                // if k =3 and first value index in linkedlist is 1 and values of i =4, meaning 4-3=1 
+                //which is not less than first value of linkedlist
                 // so remove it coz it is out size 3 window
                 if (ll.Any() && ll.First.Value <= i - k)
                     {
