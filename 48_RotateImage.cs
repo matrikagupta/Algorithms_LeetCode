@@ -14,8 +14,7 @@ namespace PracticeInterview
             //get the length of the matrix
             var n = matrix.GetUpperBound(0);
            
-            if(! String.IsNullOrEmpty( Convert.ToString( matrix[0, 0])))
-                { }
+          
             int temp = 0;
             for (int i = 0; i <= n / 2; i++)
                 {
