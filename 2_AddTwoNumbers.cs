@@ -38,25 +38,25 @@ namespace PracticeInterview
         }
     public class Program
         {
-        //public static void Main()
-        //    {
-        //    ListNode l1, l2;
-        //    ListNode node = new ListNode(2);
-        //    l1 = node;
-        //    node = new ListNode(4);
-        //    l1.next = node;
-        //    node = new ListNode(3);
-        //    l1.next.next = node;
-        //    node = new ListNode(5);
-        //    l2 = node;
-        //    node = new ListNode(6);
-        //    l2.next = node;
-        //    node = new ListNode(4);
-        //    l2.next.next = node;
+        public static void Main()
+           {
+           ListNode l1, l2;
+           ListNode node = new ListNode(2);
+           l1 = node;
+           node = new ListNode(4);
+           l1.next = node;
+           node = new ListNode(3);
+           l1.next.next = node;
+           node = new ListNode(5);
+           l2 = node;
+           node = new ListNode(6);
+           l2.next = node;
+           node = new ListNode(4);
+           l2.next.next = node;
 
-        //    _2_AddTwoNumbers obj = new _2_AddTwoNumbers();
-        //    obj.AddTwoNumbers(l1, l2);
+           _2_AddTwoNumbers obj = new _2_AddTwoNumbers();
+           obj.AddTwoNumbers(l1, l2);
 
-        //    }
+           }
         }
     }
