@@ -66,25 +66,25 @@ namespace PracticeInterview
             return newHead;
             }
 
-        //static void Main(string[] args)
-        //    {
-        //    _23_MergeKSortedLists obj = new _23_MergeKSortedLists();
-        //    ListNode node1 = new ListNode(1);
-        //    node1.next = new ListNode(2);
-        //    node1.next = new ListNode(4);
-        //    ListNode node2 = new ListNode(3);
-        //    node2.next = new ListNode(5);
-        //    ListNode node3 = new ListNode(6);
-        //    node3.next = new ListNode(0);
-        //    List<ListNode> list = new List<ListNode>();
-        //    list.Add(node1);
-        //    list.Add(node2);
-        //    list.Add(node3);
+        static void Main(string[] args)
+           {
+           23_MergeKSortedLists obj = new _23_MergeKSortedLists();
+           ListNode node1 = new ListNode(1);
+           node1.next = new ListNode(2);
+           node1.next = new ListNode(4);
+           ListNode node2 = new ListNode(3);
+           node2.next = new ListNode(5);
+           ListNode node3 = new ListNode(6);
+           node3.next = new ListNode(0);
+           List<ListNode> list = new List<ListNode>();
+           list.Add(node1);
+           list.Add(node2);
+           list.Add(node3);
 
-        //    obj.MergeKLists(list.ToArray<ListNode>());
+           obj.MergeKLists(list.ToArray<ListNode>());
 
 
 
-        //    }
+           }
         }
     }
