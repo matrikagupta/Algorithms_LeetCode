@@ -33,20 +33,20 @@ namespace PracticeInterview
 
 
 
-    //class Program
-    //{
+    class Program
+    {
 
-    //    static void Main(string[] args)
-    //    {
-    //        int[] a = { 3,5,3,2,7,3, 15 };
-    //        int target = 5; 
-    //        _1_TwoSum obj = new _1_TwoSum();
-    //        int[] u = obj.twoSum(a, target);
-    //        Console.WriteLine(string.Join(",", u));
-    //        Console.ReadLine();
+       static void Main(string[] args)
+       {
+           int[] a = { 3,5,3,2,7,3, 15 };
+           int target = 5; 
+           _1_TwoSum obj = new _1_TwoSum();
+           int[] u = obj.twoSum(a, target);
+           Console.WriteLine(string.Join(",", u));
+           Console.ReadLine();
 
 
-    //    }
+       }
 
-    //}
+    }
     }
