@@ -31,19 +31,19 @@ namespace PracticeInterview
 
             }
         }
-        //static void Main(string[] args)
-        //    {
-        //    _21_MergeTwoSortedList obj = new _21_MergeTwoSortedList();
-        //    ListNode node1 = new ListNode(1);
-        //    node1.next = new ListNode(2);
-        //    node1.next = new ListNode(4);
-        //    ListNode node2 = new ListNode(3);
-        //    node2.next = new ListNode(5);
+        static void Main(string[] args)
+           {
+           _21_MergeTwoSortedList obj = new _21_MergeTwoSortedList();
+           ListNode node1 = new ListNode(1);
+           node1.next = new ListNode(2);
+           node1.next = new ListNode(4);
+           ListNode node2 = new ListNode(3);
+           node2.next = new ListNode(5);
 
-        //    obj.MergeTwoLists(node1,node2);
+           obj.MergeTwoLists(node1,node2);
 
 
 
-        //    }
+           }
         
     }

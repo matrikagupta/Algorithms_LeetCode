@@ -35,10 +35,10 @@ namespace PracticeInterview
             }
 
 
-        //public static void Main()
-        //    {
-        //    _17_LetterCombinationOfPhoneNumber obj = new _17_LetterCombinationOfPhoneNumber();
-        //      obj.LetterCombinations("23");
-        //    }
+        public static void Main()
+           {
+           _17_LetterCombinationOfPhoneNumber obj = new _17_LetterCombinationOfPhoneNumber();
+             obj.LetterCombinations("23");
+           }
         }
     }
