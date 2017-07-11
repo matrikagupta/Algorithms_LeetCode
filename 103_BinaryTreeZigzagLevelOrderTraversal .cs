@@ -45,6 +45,7 @@ namespace PracticeInterview
         static void Main()
             {
             _103_BinaryTreeZigzagLevelOrderTraversal obj = new _103_BinaryTreeZigzagLevelOrderTraversal();
+			//creating a tree
             TreeNode root = new TreeNode(3);
             root.left = new TreeNode(9);
             root.right = new TreeNode(10);
@@ -60,7 +61,6 @@ namespace PracticeInterview
             root.right.left.right = new TreeNode(16);
             root.right.right.left = new TreeNode(13);
             root.right.right.right = new TreeNode(17);
-
             obj.ZigzagLevelOrder(root);
 
             }
