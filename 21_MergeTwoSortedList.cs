@@ -39,10 +39,7 @@ namespace PracticeInterview
            node1.next = new ListNode(4);
            ListNode node2 = new ListNode(3);
            node2.next = new ListNode(5);
-
            obj.MergeTwoLists(node1,node2);
-
-
 
            }
         

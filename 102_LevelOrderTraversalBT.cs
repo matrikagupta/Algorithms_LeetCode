@@ -37,7 +37,5 @@ namespace PracticeInterview
                 { TraverseTree(root.right, level + 1, list); }
             return list;
             }
-
-
         }
     }
